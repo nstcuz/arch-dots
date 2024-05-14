@@ -4,6 +4,8 @@
     // "height": 30, // Waybar height (to be removed for auto height)
     "margin": "4 4 0 4",
     // "width": 1280, // Waybar width
+    "output": "DP-1",
+
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/mode"],
     "modules-center": ["clock", "custom/weather"],
