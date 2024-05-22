@@ -1,7 +1,6 @@
 * {
     border: none;
     border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: Liberation Mono;
     min-height: 20px;
 }
@@ -35,6 +34,13 @@ window#waybar.hidden {
     font-size: 12px;
 }
 
+#workspaces button.active {
+    color: #fff;
+    font-size: 16px;
+    background: #7c818c;
+    border-radius: inherit;
+}
+
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     transition: none;
@@ -42,12 +48,36 @@ window#waybar.hidden {
     text-shadow: inherit;
     border: 2px solid #c6d0f5;
     border-radius: inherit;
-    color: #383c4a;
-    background: #7c818c;
+    color: #fff;
+    font-size: 16px;
 }
 
 #workspaces button.focused {
     color: white;
+}
+
+#cpu {
+    border: 2px solid #c6d0f5;  
+    color: #c6d0f5;
+    background: #383c4a;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 10px;
+    transition: none;
+
+    margin-right: 4px;
+}
+
+#memory {
+    border: 2px solid #c6d0f5;  
+    color: #c6d0f5;
+    background: #383c4a;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 10px;
+    transition: none;
+
+    margin-left: 4px;
 }
 
 #clock {

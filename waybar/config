@@ -7,40 +7,55 @@
     "output": "DP-1",
 
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "hyprland/mode"],
-    "modules-center": ["clock", "custom/weather"],
-    "modules-right": ["pulseaudio", "custom/mem", "backlight", "battery", "tray"],
+    "modules-left": ["hyprland/workspaces"], 
+    "modules-center": ["cpu", "clock", "memory"],
+    "modules-right": ["pulseaudio", "tray"],
 
-
-
-
-
-
-
-
-
-    //***************************
-    //*  Modules configuration  *
-    //***************************
+        //***************************
+        //*       Left Module       *
+        //***************************
 
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "persistent_workspaces": {
+        "persistent-workspaces": {
             "1": [],
             "2": [],
             "3": [],
-            "4": [],
+            "10": [
+              "HDMI-A-1"
+            ],
         },
     },
 
+      //***************************
+      //      Middle Module       *
+      //***************************
+
+    "cpu": {
+        "interval": 10,
+        "format": "{}% ",
+        "max-length": 10
+    },
+
     "clock": {
-        // "timezone": "America/Vancouver",
+        "timezone": "America/Vancouver",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%a, %d %b, %I:%M %p}"
     },
 
+    "memory": {
+        "interval": 30,
+        "format": "{}% ",
+        "max-length": 10,
+        "on-click": "kitty -e btop"
+    },
+
+      //***************************
+      //      Right Module        *
+      //***************************
+
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 2,
         "reverse-scrolling": 1,
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
@@ -50,12 +65,6 @@
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["奄", "奔", "墳"]
         },
         "on-click": "pavucontrol",
         "min-length": 13,
