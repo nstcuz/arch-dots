@@ -8,9 +8,12 @@ spotify
 yay
 user-dirs.dirs
 user-dirs.locale
+<<<<<<< HEAD
 obsidian
 libvirt
 gnome-boxes
 VSCodium
 Slack
 VPNetworkLLC
+=======
+>>>>>>> ff95b951d2896b81f6abdb3eca5d7cea52df4ed0
