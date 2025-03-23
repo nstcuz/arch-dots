@@ -1,22 +1,27 @@
-(defwindow test
-    :monitor 1
-    :geometry (geometry :x "0%"
+;; UI window that places the blocks
+(defwindow dock
+    ; :monitor 1
+    :geometry (geometry :x "0%" 
                         :y "4px"
-                        :width "60%"
+                        :width "620px"
                         :height "30px"
-                        :anchor "bottom center")
-    ; :stacking "overlay" ; controls where your window appears in relation to other windows
-    :exclusive true     ; if it takes space other windows cant use
-    :focusable false    ; interact with widget
-    :namespace "test"   ;
-    (dock)              ; call widgets within this window
-)
+                        :anchor "bottom center"
+                    )
+    :stacking "overlay"             ;; where window appears in stack: fg, bg, overlay, bottom
+    :exclusive true                 ;; reserve space for widget
+    :focusable false                ;; KB accessable (search values)
+    (app-dock))
 
-;; Define a simple widget to display in the window
-(defwidget dock []
-    (box :class "test-box"
-        :orientation "horizontal"
-        :space-evenly false
-        (label :text "Hello Dock")
-    )
-)
+;; defwindow is the blueprint / building block
+(defwidget app-dock []
+    (box :class "dock"
+        :orientation "horizontal"   ;; vertical or horizontal
+        :spacing "12"               ;; space between items
+        :halign "fill"              ;; orizontal allignment :start, center, end, fill
+        ; :valign                   ;; vertical allignment :start, center, end, fill
+            (button :class "dock-button" :onclick "systemd-run --user bash -c 'hyprctl dispatch focusmonitor 0 && kitty'" "")
+            (button :class "dock-button" :onclick "hyprctl dispatch focusmonitor 0 && zen-browser" "")
+            (button :class "dock-button" :onclick "hyprctl dispatch focusmonitor 0 && vscodium" "")
+            (button :class "dock-button" :onclick "systemd-run --user bash -c 'hyprctl dispatch focusmonitor 0 && cider'" "")
+            (button :class "dock-button" :onclick "systemd-run --user bash -c 'hyprctl dispatch focusmonitor 0 && discord'" "")
+))

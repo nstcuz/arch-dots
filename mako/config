@@ -2,11 +2,10 @@ sort=-time
 
 # pos / size
 anchor=top-left
-width=420
+width=320
 height=240
 margin=12
 padding=10
-
 
 # design / font
 background-color=#383C4A
@@ -18,7 +17,7 @@ font=JetBrainsMono Nerd Font 11
 text-color=#C6D0F5
 
 # icons
-# can i make a border around the icson??
+# can i make a border around the icons??
 icons=1
 max-icon-size=48 
 

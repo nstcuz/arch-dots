@@ -1,8 +1,37 @@
-* { all: unset; }
+$bg: #383C4A;
+$fg: #C6D0F5;
+$gray: #7C818C;
+$pink-accent:#F4B8E4;
+$lavendar-accent: #B7BDF8;
 
-.test-box {
-    background-color: rgba(6, 6, 190);
-    border-radius: 10px;
-    padding: 8px;
-    color: #ffffff;
+* {
+  all: unset;
+}
+
+.dock {
+  background-color: $bg;
+  border: 2px solid $fg;
+  border-radius: 10px;
+  padding: 8px;
+  color: $fg;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 24px;
+
+  .dock-button {
+    background-color: $bg;
+    border: 2px solid $gray;
+    border-radius: 8px;
+    box-shadow: inset 0px -0.5px 3px $fg;
+
+    // &:last-child{
+    //  margin-right: 0px; 
+    // }
+
+    &:hover {
+      background-color: $lavendar-accent;
+      color: $bg;
+      transition: all 350ms ease-in;
+      box-shadow: inset 0px -0.5px 3px $bg;
+    }
   }
+}
