@@ -1,0 +1,22 @@
+(defwindow test
+    :monitor 1
+    :geometry (geometry :x "0%"
+                        :y "4px"
+                        :width "60%"
+                        :height "30px"
+                        :anchor "bottom center")
+    ; :stacking "overlay" ; controls where your window appears in relation to other windows
+    :exclusive true     ; if it takes space other windows cant use
+    :focusable false    ; interact with widget
+    :namespace "test"   ;
+    (dock)              ; call widgets within this window
+)
+
+;; Define a simple widget to display in the window
+(defwidget dock []
+    (box :class "test-box"
+        :orientation "horizontal"
+        :space-evenly false
+        (label :text "Hello Dock")
+    )
+)

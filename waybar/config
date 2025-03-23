@@ -1,0 +1,103 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 0, 
+    "width": 0,
+    "margin": "4 4 0 4",
+    "output": "DP-1",
+
+    "modules-left": [ "clock", "hyprland/workspaces"], 
+    "modules-center": ["cpu", "mpris", "memory"],
+    "modules-right": ["wlr/taskbar","pulseaudio"],
+
+        //***************************
+        //*       Left Module       *
+        //***************************
+
+
+    "clock": {
+        "timezone": "America/Vancouver",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%d %b, %I:%M %p}"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "format": " {icon} ",
+        "icon-size": 16,
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
+    },
+
+      //***************************
+      //      Middle Module       *
+      //***************************
+
+    "cpu": {
+        "interval": 10,
+        "format": "{}% ",
+        "max-length": 10,
+        "on-click": "kitty -e btop"
+    },
+
+    "mpris": {
+        "player": "cider",
+        "format": "{player_icon} {title} - {artist}",
+        "max-length": 60,
+        "on-click": "playerctl --player=cider play-pause",
+        "on-scroll-up": "playerctl --player=cider next",
+        "on-scroll-down": "playerctl --player=cider previous",
+        "interval": 1,
+        "tooltip": true,
+        "player-icons": {
+            "cider": "",
+            "firefox": "",
+            "spotify": ""
+        }
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "{}% ",
+        "max-length": 10,
+        "on-click": "kitty -e btop"
+    },
+
+      //***************************
+      //      Right Module        *
+      //***************************
+
+    "pulseaudio": {
+        "scroll-step": 2,
+        "reverse-scrolling": 1,
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon}   {format_source}",
+        "format-bluetooth-muted": " {icon}   {format_source}",
+        "format-muted": "婢  {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "default": "",
+            "muted": "",
+            "bluetooth": "",
+            "bluetooth-muted": ""
+        },
+        "on-click": "pwvucontrol",
+        "on-click-right": "kitty -e bluetuith",
+    },
+
+
+    "wlr/taskbar": {
+        "on-click": "activate",
+        "on-click-right": "close",
+        "on-scroll-up": "hyprctl dispatch cyclenext",
+        "on-scroll-down": "hyprctl dispatch cyclenext reverse",
+        "icon-size": 16,
+        "show-icon": true,
+        "format": " {icon} ",
+        "ignore": ["waybar"]
+    }
+}

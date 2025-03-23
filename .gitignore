@@ -1,0 +1,30 @@
+# Unwanted or private app folders
+/discord/
+/Electron/
+/dconf/
+/go/
+/gtk-3.0/
+/gtk-4.0/
+/pnpm/
+/obsidian/
+/pulse/
+/sh.cider.genten/
+/VSCodium/
+/VPNetworkLLC/
+
+# Backup/Swap/Cache files
+*.swp
+*.bak
+*~
+.cache/
+logs/
+*.log
+
+# local build tool config
+/.git/
+/yay/
+/nautilus/
+
+# misc
+/user-dirs.dirs
+/user-dirs.locale
