@@ -82,6 +82,10 @@ window#waybar {
     border-radius: 0px 8px 8px 0px;
 }
 
+#workspaces button:only-child.active {
+    border-radius: 8px;
+}
+
 /* Middle Module - CPU, MPRIS & Memory*/
 #cpu {
     border: 2px solid @blue;  
@@ -170,6 +174,10 @@ window#waybar {
     border-radius: 0px 8px 8px 0px;
 } 
 
+#taskbar button:only-child.active {
+    border-radius: 8px;
+}
+
 #pulseaudio {
     padding-left: 8px;
     padding-right: 8px;
@@ -180,7 +188,3 @@ window#waybar {
     background: @bg;
 }
 
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}

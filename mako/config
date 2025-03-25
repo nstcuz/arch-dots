@@ -1,4 +1,5 @@
 sort=-time
+output=DP-1
 
 # pos / size
 anchor=top-left

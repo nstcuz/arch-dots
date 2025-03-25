@@ -45,7 +45,7 @@
     "mpris": {
         "player": "cider",
         "format": "{player_icon} {title} - {artist}",
-        "max-length": 60,
+        "max-length": 55,
         "on-click": "playerctl --player=cider play-pause",
         "on-scroll-up": "playerctl --player=cider next",
         "on-scroll-down": "playerctl --player=cider previous",
@@ -59,7 +59,7 @@
     },
 
     "memory": {
-        "interval": 30,
+        "interval": 10,
         "format": "{}% ",
         "max-length": 10,
         "on-click": "kitty -e btop"
@@ -72,7 +72,7 @@
     "pulseaudio": {
         "scroll-step": 2,
         "reverse-scrolling": 1,
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon}   {format_source}",
         "format-bluetooth-muted": " {icon}   {format_source}",
         "format-muted": "婢  {format_source}",
@@ -86,15 +86,14 @@
             "bluetooth-muted": ""
         },
         "on-click": "pwvucontrol",
-        "on-click-right": "kitty -e bluetuith",
+        "on-click-right": "kitty -e bluetuith"
+        
     },
 
 
     "wlr/taskbar": {
         "on-click": "activate",
         "on-click-right": "close",
-        "on-scroll-up": "hyprctl dispatch cyclenext",
-        "on-scroll-down": "hyprctl dispatch cyclenext reverse",
         "icon-size": 16,
         "show-icon": true,
         "format": " {icon} ",
