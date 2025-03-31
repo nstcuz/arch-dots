@@ -1,27 +1,5 @@
-;; UI window that places the blocks
-(defwindow dock
-    :monitor 1
-    :geometry (geometry :x "0%" 
-                        :y "4px"
-                        :width "620px"
-                        :height "30px"
-                        :anchor "bottom center"
-                    )
-    :stacking "overlay"             ;; where window appears in stack: fg, bg, overlay, bottom
-    :exclusive true                 ;; reserve space for widget
-    :focusable false                ;; KB accessable (search values)
-    (app-dock))
+; include: dock
+(include "eww_dock.yuck")
 
-;; defwindow is the blueprint / building block
-(defwidget app-dock []
-    (box :class "dock"
-        :orientation "horizontal"   ;; vertical or horizontal
-        :spacing "12"               ;; space between items
-        :halign "fill"              ;; orizontal allignment :start, center, end, fill
-        ; :valign                   ;; vertical allignment :start, center, end, fill
-            (button :class "dock-button" :onclick "systemd-run --user bash -c 'hyprctl dispatch focusmonitor 0 && kitty'" "")
-            (button :class "dock-button" :onclick "hyprctl dispatch focusmonitor 0 && zen-browser" "")
-            (button :class "dock-button" :onclick "hyprctl dispatch focusmonitor 0 && vscodium" "")
-            (button :class "dock-button" :onclick "systemd-run --user bash -c 'hyprctl dispatch focusmonitor 0 && cider'" "")
-            (button :class "dock-button" :onclick "systemd-run --user bash -c 'hyprctl dispatch focusmonitor 0 && discord'" "")
-))
+; include: volume | bluetooth
+(include "eww_sound.yuck")

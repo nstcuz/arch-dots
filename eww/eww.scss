@@ -8,9 +8,9 @@ $lavendar-accent: #B7BDF8;
   all: unset;
 }
 
-.dock {
+.dock-container {
   background-color: $bg;
-  border: 2px solid $fg;
+  border: 2px solid $lavendar-accent;
   border-radius: 10px;
   padding: 8px;
   color: $fg;
@@ -35,3 +35,31 @@ $lavendar-accent: #B7BDF8;
     }
   }
 }
+
+.sound-container {
+  background-color: $bg;
+  border: 2px solid $lavendar-accent;
+  border-radius: 10px;
+  padding: 8px;
+  color: $fg;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 24px;
+
+  .sound-button {
+    background-color: $bg;
+    border: 2px solid $gray;
+    border-radius: 8px;
+    box-shadow: inset 0px -0.5px 3px $fg; 
+
+    // &:last-child{
+    //  margin-right: 0px; 
+    // }
+
+    &:hover {
+      background-color: $lavendar-accent;
+      color: $bg;
+      transition: all 350ms ease-in;
+      box-shadow: inset 0px -0.5px 3px $bg;
+    }
+  }
+}  

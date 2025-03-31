@@ -1,0 +1,37 @@
+(defpoll volume-level :interval "750ms" :initial 50
+  "~/scripts/eww/get-volume.sh")
+
+;; UI window that places the blocks
+(defwindow sound
+    :monitor 1
+    :geometry (geometry :x "4px" 
+                        :y "4px"
+                        :width "420px"
+                        :height "230px"
+                        :anchor "top right")
+    :stacking "overlay"
+    :exclusive false
+    :focusable false
+    (sound-dropdown)
+)
+
+;; defwindow is the blueprint / building block
+(defwidget sound-dropdown []
+    (box :class "sound-container" :orientation "vertical" :spacing "12" :valign "start"             
+        (box :class "sound-innie" :orientation "horizontal" :spacing "12"
+            (button :class "sound-button" :onclick "systemd-run --user bash -c 'pwvucontrol'" "")
+            (button :class "sound-button" :onclick "systemd-run --user bash -c 'kitty -e bluetuith'" "")
+        )
+
+        (eventbox :class "volume-slider-container"
+
+            (scale
+            :class "volume-slider"
+            :min 0
+            :max 100
+            :value volume-level
+            :onchange "wpctl set-volume @DEFAULT_AUDIO_SINK@ $(echo {} / 100 | bc -l)"
+            )
+        )
+    )
+)

@@ -19,32 +19,27 @@
     {
         "type": "title",
         "key":   "{#90}│ {#94}User       {#90}│",
-        "format":"{user-name-colored}{at-symbol-colored}{host-name-colored}                            {#90}│"
+        "format":"{user-name-colored}{at-symbol-colored}{host-name-colored}"
       },
       {
         "type": "os",
         "key":   "{#90}│ {#94}OS         {#90}│",
-        "format":"{name} | {arch}                  {#90}│"
-      },
-      {
-        "type": "uptime",
-        "key":   "{#90}│ {#94}Uptime     {#90}│",
-        "format":"{hours}:{minutes}"
+        "format":"{name} | {arch}"
       },
       {
         "type": "packages",
         "key":   "{#90}│ {#94}Packages   {#90}│",
-        "format":"All: {all} | 󰮯: {pacman}                    {#90}│"
+        "format":"All: {all} | 󰮯: {pacman}"
       },
       {
         "type": "wm",
         "key":   "{#90}│ {#94}WM         {#90}│",
-        "format":"{process-name} | {version}                    {#90}│"
+        "format":"{process-name} | {version}"
       },
       {
         "type": "terminal",
         "key":   "{#90}│ {#94}Terminal   {#90}│",
-        "format":"{pretty-name} | {version}                       {#90}│"
+        "format":"{pretty-name} | {version}"
       },
 //      {
 //        "type": "editor",
@@ -54,30 +49,30 @@
       {
         "type": "font",
         "key":   "{#90}│ {#94}Font       {#90}│",
-        "format":"{combined}{#90}│"
+        "format":"{combined}"
       },
       {
         "type": "kernel",
         "key":   "{#90}│ {#94}Kernel     {#90}│",
-        "format":"{release}                       {#90}│"
+        "format":"{release}"
       },
       {
         "type": "shell",
         "key":   "{#90}│ {#94}Shell      {#90}│",
-        "format":"{pretty-name} | {version}                        {#90}│"
+        "format":"{pretty-name} | {version}"
       },
       {
         "type": "cpu",
         "key":   "{#90}│ {#94}CPU        {#90}│",
         "temp": true,
-        "format":"{name} [{freq-max}]         {#90}│"
+        "format":"{name} [{freq-max}]"
       },
       {
         "type": "gpu",
         "key":   "{#90}│ {#94}GPU        {#90}│",
         "detectionMethod": "auto",
         "driverSpecific": true,
-        "format":"{name} [{frequency}]{#90}│"
+        "format":"{name} [{frequency}]"
       },
       {
         "type": "bluetooth",
@@ -101,6 +96,11 @@
         "type": "publicip",
         "key":   "{#90}│ {#94}Public IP  {#90}│",
         "format":"{location} {ip}"
+      },
+      {
+        "type": "uptime",
+        "key":   "{#90}│ {#94}Uptime     {#90}│",
+        "format":"{hours}:{minutes}"
       },
       {
         "type": "custom",
