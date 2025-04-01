@@ -1,0 +1,30 @@
+@define-color bg              #192B38;
+@define-color bg-green        #0E1F14;
+@define-color fg              #B6D7F0;
+@define-color silver          #7a96a1;
+@define-color black           #0B0F11;
+@define-color knob            #1A1E22;
+
+scale {
+  /* min-height: 32px; */
+  min-width: 140px;
+}
+
+scale trough {
+  background-color: @silver; 
+  border: 2px solid @fg;
+  border-radius: 10px;
+  min-height: 6px;
+}
+
+scale highlight {
+  background-color: @fg;
+  border-radius: 10px;
+}
+
+scale slider {
+  background-color: transparent;
+  border: none;
+  min-width: 14px;
+  min-height: 14px;
+}

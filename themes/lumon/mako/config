@@ -1,0 +1,26 @@
+sort=-time
+output=DP-1
+
+# pos / size
+anchor=top-left
+height=240
+margin=4
+padding=10
+
+# design / font
+background-color=#173D37
+border-size=2
+border-color=#B6D7F0
+border-radius=6
+
+font=UbuntuMono Nerd Font 13
+text-color=#B6D7F0
+
+# icons
+# can i make a border around the icons??
+icons=1
+max-icon-size=48 
+
+default-timeout=5000
+progress-color=#B6D7F0
+layer=overlay

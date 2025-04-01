@@ -1,0 +1,193 @@
+@define-color bg              #192B38;
+@define-color bg-green        #0E1F14;
+@define-color fg              #B6D7F0;
+@define-color silver          #7a96a1;
+@define-color black           #0B0F11;
+@define-color white           #1A1E22;
+
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: UbuntuMono Nerd Font;
+    font-size: 1.125rem;
+    min-height: 20px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* Left Module - Clock & Workspaces */
+
+#clock {
+    margin-right: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 2px solid @silver;
+    border-radius: 10px;
+    transition: none;
+    color: @white;
+    background: @bg-green;
+}
+
+#workspaces {
+    border: 2px solid @silver;
+    border-radius: 10px;
+    background: @bg-green;
+    transition: all 250ms ease-in-out;
+}
+
+#workspaces button {
+    color: @silver;
+    background: transparent;
+    padding: 6px;
+    padding-left: 3px;
+    box-shadow: inset 0px -0.5px 3px @silver;
+}
+
+/* hover on workspace */
+#workspaces button:hover {
+    background: @silver;
+    color: @bg-green;
+    box-shadow: inset 0px -0.5px 3px @bg-green;
+    text-shadow: none;
+    padding-bottom: 6px;
+    /* margin-bottom: 0.5px; */
+    font-weight: 600;
+    transition: all 250ms linear;
+}
+
+#workspaces button:first-child,
+#workspaces button:first-child:hover {
+    border-radius: 9px 0px 0px 9px;
+}
+
+#workspaces button:last-child,
+#workspaces button:last-child:hover {
+    border-radius: 0px 9px 9px 0px;
+}
+
+/* active workspace */
+#workspaces button.active {
+    background: @fg;
+    color: @white;
+    box-shadow: inset 0px -0.5px 0px @silver;
+    transition: all 250ms linear;
+    text-shadow: none;
+}
+
+#workspaces button:first-child.active {
+    border-radius: 8px 0px 0px 8px;
+}
+
+#workspaces button:last-child.active {
+    border-radius: 0px 8px 8px 0px;
+}
+
+#workspaces button:only-child.active {
+    border-radius: 8px;
+}
+
+/* Middle Module - CPU, MPRIS & Memory*/
+#cpu {
+    border: 2px solid @blue;  
+    color: @blue;
+    background: @bg-green;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+
+#mpris {
+    border: 2px solid @fg;  
+    color: @blue;
+    background: @bg-green;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+
+#memory {
+    border: 2px solid @blue;  
+    color: @blue;
+    background: @bg-green;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+
+/* Right Module - Taskbar (system tray) & Audio */
+#taskbar{
+    margin-right: 8px;
+    padding: 0px;
+    border: 2px solid @silver;
+    border-radius: 10px;
+    background: @bg-green;
+    transition: all 250ms ease-in-out;
+}
+
+#taskbar button {
+    color: @silver;
+    background: transparent;
+    padding: 6px;
+    padding-left: 3px;
+    box-shadow: inset 0px -0.5px 3px @silver;
+}
+
+/* hover on taskbar item*/
+#taskbar button:hover {
+    background: @silver;
+    color: @bg-green;
+    box-shadow: inset 0px -0.5px 3px @bg-green;
+    text-shadow: none;
+    padding-bottom: 6px;
+    /* margin-bottom: 0.5px; */
+    font-weight: 600;
+    transition: all 250ms linear;
+}
+
+#taskbar button:first-child,
+#taskbar button:first-child:hover {
+    border-radius: 9px 0px 0px 9px;
+}
+
+#taskbar button:last-child,
+#taskbar button:last-child:hover {
+    border-radius: 0px 9px 9px 0px;
+}
+
+/* active taskbar item*/
+#taskbar button.active {
+    background: @fg;
+    color: @bg-green;
+    box-shadow: inset 0px -0.5px 0px @silver;
+    transition: all 250ms linear;
+    text-shadow: none;
+} 
+
+#taskbar button:first-child.active {
+    border-radius: 8px 0px 0px 8px;
+}
+
+#taskbar button:last-child.active {
+    border-radius: 0px 8px 8px 0px;
+} 
+
+#taskbar button:only-child.active {
+    border-radius: 8px;
+}
+
+#pulseaudio {
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 2px solid @silver; 
+    border-radius: 10px;
+    transition: none;
+    color: @blue;
+    background: @bg-green;
+}
+
