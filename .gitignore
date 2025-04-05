@@ -15,8 +15,8 @@
 /VPNetworkLLC/
 /QtProject.conf
 /Epic/Psychonauts2/Saved/SaveGames
-/qmk
-/qmk_firmware
+/qmk/
+/qmk_firmware/
 
 # Backup/Swap/Cache files
 *.swp
