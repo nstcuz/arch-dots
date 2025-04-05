@@ -3,7 +3,7 @@
 
 ;; UI window that places the blocks
 (defwindow sound
-    :monitor '["Dell Inc. S2719DGF 2RD3CY2", 0]' 
+    :monitor '["Dell Inc. S2719DGF 2RD3CY2", 1]' 
     :geometry (geometry :x "4px" 
                         :y "4px"
                         :width "320px"
