@@ -5,20 +5,22 @@
 @define-color black           #0B0F11;
 @define-color knob            #1A1E22;
 
+/* there seems to be an issue when using vars */
+
 scale {
   /* min-height: 32px; */
   min-width: 140px;
 }
 
 scale trough {
-  background-color: @silver; 
-  border: 2px solid @fg;
+  background-color: #7a96a1; 
+  border: 2px solid #B6D7F0;
   border-radius: 10px;
   min-height: 6px;
 }
 
 scale highlight {
-  background-color: @fg;
+  background-color: #192B38;
   border-radius: 10px;
 }
 

@@ -3,10 +3,10 @@
 
 ;; UI window that places the blocks
 (defwindow sound
-    :monitor 1
+    :monitor '["Dell Inc. S2719DGF 2RD3CY2", 0]' 
     :geometry (geometry :x "4px" 
                         :y "4px"
-                        :width "420px"
+                        :width "320px"
                         :height "230px"
                         :anchor "top right")
     :stacking "overlay"
@@ -22,9 +22,11 @@
             (button :class "sound-button" :onclick "systemd-run --user bash -c 'pwvucontrol'" "")
             (button :class "sound-button" :onclick "systemd-run --user bash -c 'kitty -e bluetuith'" "")
         )
+        (box :class "sound-innie" :orientation "horizontal" :spacing "12"
+            (button :class "sound-button" :onclick "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" :onrightclick "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle" "    Mute   ")
+        )
 
         (eventbox :class "volume-slider-container"
-
             (scale
             :class "volume-slider"
             :min 0

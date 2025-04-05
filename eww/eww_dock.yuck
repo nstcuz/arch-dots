@@ -1,6 +1,6 @@
 ;; UI window that places the blocks
 (defwindow dock
-    :monitor 1
+:monitor '["Dell Inc. S2719DGF 2RD3CY2", 0]'
     :geometry (geometry :x "0%" 
                         :y "4px"
                         :width "620px"

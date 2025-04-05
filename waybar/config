@@ -5,6 +5,8 @@
     "width": 0,
     "margin": "4 4 0 4",
     "output": "DP-1",
+    "style": "~/.config/waybar/style.css",
+
 
     "modules-left": [ "clock", "hyprland/workspaces"], 
     "modules-center": ["cpu", "mpris", "memory"],

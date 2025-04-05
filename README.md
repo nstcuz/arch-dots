@@ -8,3 +8,4 @@
 [] - eww volume drop down
 [] - eww bluetooth
 [] - eww shutdown/sleep/etc
+[] - configure LY? 

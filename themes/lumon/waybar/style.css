@@ -27,7 +27,7 @@ window#waybar {
     border: 2px solid @silver;
     border-radius: 10px;
     transition: none;
-    color: @white;
+    color: white;
     background: @bg-green;
 }
 
@@ -92,7 +92,7 @@ window#waybar {
 /* Middle Module - CPU, MPRIS & Memory*/
 #cpu {
     border: 2px solid @blue;  
-    color: @blue;
+    color: white;
     background: @bg-green;
     padding-right: 16px;
     padding-left: 16px;
@@ -102,7 +102,7 @@ window#waybar {
 
 #mpris {
     border: 2px solid @fg;  
-    color: @blue;
+    color: white;
     background: @bg-green;
     padding-right: 16px;
     padding-left: 16px;
@@ -112,7 +112,7 @@ window#waybar {
 
 #memory {
     border: 2px solid @blue;  
-    color: @blue;
+    color: white;
     background: @bg-green;
     padding-right: 16px;
     padding-left: 16px;
@@ -187,7 +187,7 @@ window#waybar {
     border: 2px solid @silver; 
     border-radius: 10px;
     transition: none;
-    color: @blue;
+    color: white;
     background: @bg-green;
 }
 
