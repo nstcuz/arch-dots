@@ -1,0 +1,21 @@
+(defwindow dock
+    :monitor '["Dell Inc. S2719DGF 2RD3CY2", 1]'
+        :geometry (geometry :x "0%" 
+                            :y "4px"
+                            :height "30px"
+                            :anchor "top center"
+                        )
+        :stacking "overlay"             ;; where window appears in stack: fg, bg, overlay, bottom
+        :exclusive true                 ;; reserve space for widget
+        :focusable false                ;; KB accessable (search values)
+        (app-dock)
+    )
+
+(defwidget app-bar []
+    (box :class "bar-container"
+        :orientation "horizontal"   ;; vertical or horizontal
+        :spacing "12"               ;; space between items
+        :halign "fill"              ;; orizontal allignment :start, center, end, fill
+        :valign "center"                  ;; vertical allignment :start, center, end, fill
+    )
+)

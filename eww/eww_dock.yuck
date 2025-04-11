@@ -3,7 +3,7 @@
 :monitor '["Dell Inc. S2719DGF 2RD3CY2", 1]'
     :geometry (geometry :x "0%" 
                         :y "4px"
-                        :width "620px"
+                        :width "520px"
                         :height "30px"
                         :anchor "bottom center"
                     )

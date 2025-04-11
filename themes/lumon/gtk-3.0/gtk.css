@@ -1,9 +1,10 @@
-@define-color bg              #192B38;
-@define-color bg-green        #0E1F14;
-@define-color fg              #B6D7F0;
-@define-color silver          #7a96a1;
-@define-color black           #0B0F11;
-@define-color knob            #1A1E22;
+@define-color bg              #18232a;
+@define-color bg-green        #163f38;
+@define-color fg              #98b6b0;
+@define-color silver          #d6e0e2;
+@define-color white           #f7f6f9;
+@define-color light-blue      #7f96ae;
+@define-color blue            #307191;
 
 /* there seems to be an issue when using vars */
 
@@ -13,14 +14,14 @@ scale {
 }
 
 scale trough {
-  background-color: #7a96a1; 
-  border: 2px solid #B6D7F0;
+  background-color: #f7f6f9; 
+  border: 2px solid #7f96ae;
   border-radius: 10px;
   min-height: 6px;
 }
 
 scale highlight {
-  background-color: #192B38;
+  background-color: #307191;
   border-radius: 10px;
 }
 

@@ -62,7 +62,7 @@
 
     "memory": {
         "interval": 10,
-        "format": "{}% ",
+        "format": "  {}%",
         "max-length": 10,
         "on-click": "kitty -e btop"
     },
@@ -89,9 +89,9 @@
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
             "default": "",
-            "muted": "󰝟",
+            "headphone": "",
+            "muted": "",
             "bluetooth": "",
             "bluetooth-muted": "󰂲"
         },

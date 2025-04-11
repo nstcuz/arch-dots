@@ -1,10 +1,10 @@
-@define-color bg              #192B38;
-@define-color bg-green        #0E1F14;
-@define-color fg              #B6D7F0;
-@define-color silver          #7a96a1;
-@define-color black           #0B0F11;
-@define-color white           #1A1E22;
-
+@define-color bg              #18232a;
+@define-color bg-green        #163f38;
+@define-color fg              #98b6b0;
+@define-color silver          #d6e0e2;
+@define-color white           #f7f6f9;
+@define-color light-blue      #7f96ae;
+@define-color blue            #307191;
 
 * {
     border: none;
@@ -19,60 +19,60 @@ window#waybar {
 }
 
 /* Left Module - Clock & Workspaces */
-
 #clock {
     margin-right: 8px;
     padding-left: 8px;
     padding-right: 8px;
-    border: 2px solid @silver;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 2px solid @bg-green;
     border-radius: 10px;
     transition: none;
-    color: white;
-    background: @bg-green;
+    color: @bg-green;
+    background: @white;
 }
 
 #workspaces {
+    font-size: 1.25rem;
     border: 2px solid @silver;
     border-radius: 10px;
-    background: @bg-green;
+    background: @white;
     transition: all 250ms ease-in-out;
 }
 
 #workspaces button {
     color: @silver;
-    background: transparent;
-    padding: 6px;
-    padding-left: 3px;
+    padding: 4px;
+    padding-right: 10px;
     box-shadow: inset 0px -0.5px 3px @silver;
 }
 
 /* hover on workspace */
 #workspaces button:hover {
-    background: @silver;
-    color: @bg-green;
-    box-shadow: inset 0px -0.5px 3px @bg-green;
+    background: @fg;
+    color: @white;
+    box-shadow: inset 0px -0.5px 3px @white;
     text-shadow: none;
     padding-bottom: 6px;
-    /* margin-bottom: 0.5px; */
     font-weight: 600;
     transition: all 250ms linear;
 }
 
 #workspaces button:first-child,
 #workspaces button:first-child:hover {
-    border-radius: 9px 0px 0px 9px;
+    border-radius: 8px 0px 0px 8px;
 }
 
 #workspaces button:last-child,
 #workspaces button:last-child:hover {
-    border-radius: 0px 9px 9px 0px;
+    border-radius: 0px 8px 8px 0px;
 }
 
 /* active workspace */
 #workspaces button.active {
-    background: @fg;
+    background: @light-blue;
     color: @white;
-    box-shadow: inset 0px -0.5px 0px @silver;
+    box-shadow: inset 0px -0.5px 3px @silver;
     transition: all 250ms linear;
     text-shadow: none;
 }
@@ -91,9 +91,9 @@ window#waybar {
 
 /* Middle Module - CPU, MPRIS & Memory*/
 #cpu {
-    border: 2px solid @blue;  
-    color: white;
-    background: @bg-green;
+    border: 2px solid @bg-green;  
+    color: @bg-green;
+    background: @white;
     padding-right: 16px;
     padding-left: 16px;
     border-radius: 10px;
@@ -101,9 +101,9 @@ window#waybar {
 }
 
 #mpris {
-    border: 2px solid @fg;  
-    color: white;
-    background: @bg-green;
+    border: 2px solid @blue;
+    color: @blue;
+    background: @white;
     padding-right: 16px;
     padding-left: 16px;
     border-radius: 10px;
@@ -111,9 +111,9 @@ window#waybar {
 }
 
 #memory {
-    border: 2px solid @blue;  
-    color: white;
-    background: @bg-green;
+    border: 2px solid @bg-green;  
+    color: @bg-green;
+    background: @white;
     padding-right: 16px;
     padding-left: 16px;
     border-radius: 10px;
@@ -126,45 +126,42 @@ window#waybar {
     padding: 0px;
     border: 2px solid @silver;
     border-radius: 10px;
-    background: @bg-green;
+    background: @white;
     transition: all 250ms ease-in-out;
 }
 
 #taskbar button {
     color: @silver;
-    background: transparent;
     padding: 6px;
-    padding-left: 3px;
     box-shadow: inset 0px -0.5px 3px @silver;
 }
 
 /* hover on taskbar item*/
 #taskbar button:hover {
     background: @silver;
-    color: @bg-green;
-    box-shadow: inset 0px -0.5px 3px @bg-green;
+    color: @white;
+    box-shadow: inset 0px -0.5px 3px @fg;
     text-shadow: none;
     padding-bottom: 6px;
-    /* margin-bottom: 0.5px; */
     font-weight: 600;
     transition: all 250ms linear;
 }
 
 #taskbar button:first-child,
 #taskbar button:first-child:hover {
-    border-radius: 9px 0px 0px 9px;
+    border-radius: 8px 0px 0px 8px;
 }
 
 #taskbar button:last-child,
 #taskbar button:last-child:hover {
-    border-radius: 0px 9px 9px 0px;
+    border-radius: 0px 8px 8px 0px;
 }
 
 /* active taskbar item*/
 #taskbar button.active {
-    background: @fg;
-    color: @bg-green;
-    box-shadow: inset 0px -0.5px 0px @silver;
+    background: @light-blue;
+    color: @white;
+    box-shadow: inset 0px -0.5px 3px @white;
     transition: all 250ms linear;
     text-shadow: none;
 } 
@@ -184,10 +181,11 @@ window#waybar {
 #pulseaudio {
     padding-left: 8px;
     padding-right: 8px;
-    border: 2px solid @silver; 
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 2px solid @bg-green; 
     border-radius: 10px;
     transition: none;
-    color: white;
-    background: @bg-green;
+    color: @bg-green;
+    background: @white;
 }
-

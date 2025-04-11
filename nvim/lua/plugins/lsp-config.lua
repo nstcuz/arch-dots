@@ -12,13 +12,13 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "lua_ls",
-          "ts_ls",
-          "html",
           "bashls",
+          "lua_ls",
+          "marksman",
+          "html",
           "cssls",
           "tailwindcss",
-          "marksman",
+          "ts_ls",
           "phpactor"
         },
         automatic_installation = true,
@@ -30,19 +30,24 @@ return {
     lazy = false,
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.ts_ls.setup({})
       lspconfig.solargraph.setup({})
-      lspconfig.html.setup({})
-      lspconfig.lua_ls.setup({})
       lspconfig.bashls.setup({})
+      lspconfig.lua_ls.setup({})
+      lspconfig.marksman.setup({})
+      lspconfig.html.setup({})
+      lspconfig.emmet_ls.setup({
+        filetypes = {
+          "html", "css", "scss", "javascript", "javascriptreact", "typescriptreact"
+        },
+      })
       lspconfig.cssls.setup({})
       lspconfig.tailwindcss.setup({})
-      lspconfig.marksman.setup({})
+      lspconfig.ts_ls.setup({})
       lspconfig.phpactor.setup({})
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-      vim.keymap.set({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action, {})
+      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
     end,
   },
 }

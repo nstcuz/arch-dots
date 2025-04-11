@@ -43,17 +43,15 @@ $lavendar-accent: #B7BDF8;
   padding: 8px;
   color: $fg;
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 24px;
+  font-size: 20px;
 
   .sound-button {
     background-color: $bg;
     border: 2px solid $gray;
     border-radius: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     box-shadow: inset 0px -0.5px 3px $fg; 
-
-    // &:last-child{
-    //  margin-right: 0px; 
-    // }
 
     &:hover {
       background-color: $lavendar-accent;

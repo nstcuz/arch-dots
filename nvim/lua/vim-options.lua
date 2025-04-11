@@ -1,32 +1,31 @@
--- set tab
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-
--- set leader key
 vim.g.mapleader = " "
 
--- set clipboard to reg 0
-vim.opt.clipboard = 'unnamed,unnamedplus'
+-- Tabs
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 
--- Enable search highlighting
--- vim.o.hlsearch = true
-
--- number of screen columns to keep to the left and right of the cursor
+-- Scrolling
+vim.opt.scrolloff = 5
 vim.opt.sidescrolloff = 5
 
--- avoid wrapping a line in the middle of a word.
+-- Visuals
 vim.opt.linebreak = true
-
--- unsure
 vim.opt.swapfile = false
+vim.opt.termguicolors = true
+vim.opt.cursorline = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
--- Navigate vim panes better
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
-vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
-vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
-
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+-- Line Numbers
 vim.wo.number = true
+vim.wo.relativenumber = true
+
+-- Keymaps
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = "Move to left split" })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = "Move to below split" })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = "Move to above split" })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = "Move to right split" })
+vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>', { desc = "Clear search highlight" })
+
