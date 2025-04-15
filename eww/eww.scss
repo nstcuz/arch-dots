@@ -1,1 +1,24 @@
-/home/nood/.config/themes/catppuccin/eww/eww.scss
+* {
+  all: unset;
+  font-family: "UbuntuMono Nerd Font", monospace;
+}
+
+/* imports */
+@import "scss/all.scss";
+@import "scss/dock.scss";
+@import "scss/sound-dropdown.scss";
+
+/* vars */
+$bg: #18232a;
+$bg-green: #163f38;
+$fg: #98b6b0;
+$silver: #d6e0e2;
+$white: #f7f6f9;
+$light-blue: #7f96ae;
+$blue: #307191;
+
+$border-w: 2px;
+$br-outer: 10px;
+$br-inner: 8px;
+$border-pri: $bg-green;
+$border-sec: $silver;

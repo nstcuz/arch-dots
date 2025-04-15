@@ -1,0 +1,49 @@
+;; testing scss with lumon theme
+
+    ;; BAR STRUCTURE 
+(defwidget innie-bar []
+  (box :class "bar-container"
+       :orientation "h"            ;; vertical or horizontal
+       :halign "fill"              ;; horizontal allignment :start, center, end, fill
+       :valign "fill"              ;; vertical allignment :start, center, end, fill
+  (left-mod)
+  (center-mod)
+  (right-mod)
+  )
+)
+
+(defwidget left-mod []
+  (box :class "left-mod"
+       :orientation "h"
+       :height 34
+       :halign "start"
+       :valign "center"
+       :spacing "6"
+       :space-evenly false
+  (time)
+  (workspaces)
+  )
+)
+
+(defwidget center-mod []
+  (box :class "center-mod"
+       :orientation "h"
+       :height 34
+       :halign "center"
+       :valign "fill"
+       :spacing "6"
+       ;; :space-evenly false
+    (cpu-mod)
+    (music)
+    (ram-mod)
+  )
+)
+
+(defwidget right-mod []
+  (box :class "right-mod"
+       :orientation "h"
+       :height 34
+       :halign "end"
+       :valign "fill"
+  )
+)

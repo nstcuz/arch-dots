@@ -1,0 +1,26 @@
+;; time
+(defpoll date :interval "1s" "date '\+%e %b | %R\'")
+
+;; workspaces
+(defpoll get-open-ws :interval "1s"
+  "hyprctl -j workspaces | jq '[.[] | select(.id != -99) | .id]'"
+)
+
+(defpoll get-active-ws :interval "1s"
+  "hyprctl -j workspaces | jq '.[].name'"
+)
+
+;; music label
+(defpoll now-playing :interval "1s"
+  "playerctl metadata --format '  {{ title }}' || echo ''"
+)
+
+;; get volume
+(defpoll volume-level :interval "750ms" :initial 50
+  "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}'"
+)
+
+;; taskbar
+(defpoll get-taskbar-windows :interval "1s"
+  "hyprctl -j clients | jq '.[].initialClass'"
+)

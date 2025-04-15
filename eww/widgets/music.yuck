@@ -1,0 +1,10 @@
+(defwidget music []
+  (box :class "music" 
+       :halign "h"
+       ;; :hexpand true
+             
+   (label :class "now-playing" :limit-width 75 :text {now-playing}) 
+  )
+)
+
+

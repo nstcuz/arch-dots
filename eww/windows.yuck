@@ -1,0 +1,45 @@
+; bar
+(defwindow bar
+  :monitor '["S2719DGF"]'
+  ;; :monitor '["ARZOPA"]'
+    :geometry (geometry :x "2px" 
+                        :y "2px"
+                        :width "100%"
+                        :height "30px"
+                        :anchor "top center"
+                        :namespace "bar"
+      )
+    :stacking "overlay"             ;; where window appears in stack: fg, bg, overlay, bottom
+    :exclusive true                 ;; reserve space for widget
+    :focusable false                ;; KB accessable (search values)
+  (innie-bar)
+)
+
+; dock
+(defwindow dock
+:monitor '["S2719DGF", 1]'
+    :geometry (geometry :x "0%" 
+                        :y "4px"
+                        :width "520px"
+                        :anchor "bottom center"
+                        :namespace "dock"
+                    )
+    :stacking "overlay"             ;; where window appears in stack: fg, bg, overlay, bottom
+    :exclusive true                 ;; reserve space for widget
+    :focusable false                ;; KB accessable (search values)
+    (app-dock)
+)
+;; sound
+(defwindow sound
+    :monitor '["Dell Inc. S2719DGF 2RD3CY2", 1]' 
+    :geometry (geometry :x "6px" 
+                        :y "6px"
+                        :width "320px"
+                        :height "230px"
+                        :anchor "top right")
+                        :namespace "sound"
+    :stacking "overlay"
+    :exclusive false
+    :focusable false
+    (sound-dropdown)
+)

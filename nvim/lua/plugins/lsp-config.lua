@@ -30,6 +30,7 @@ return {
     lazy = false,
     config = function()
       local lspconfig = require("lspconfig")
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
       lspconfig.solargraph.setup({})
       lspconfig.bashls.setup({})
       lspconfig.lua_ls.setup({})
@@ -40,10 +41,13 @@ return {
           "html", "css", "scss", "javascript", "javascriptreact", "typescriptreact"
         },
       })
-      lspconfig.cssls.setup({})
+      lspconfig.cssls.setup({
+        filetypes = { "css" },
+      })
       lspconfig.tailwindcss.setup({})
       lspconfig.ts_ls.setup({})
       lspconfig.phpactor.setup({})
+
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})

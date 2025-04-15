@@ -95,6 +95,6 @@
             "bluetooth": "",
             "bluetooth-muted": "󰂲"
         },
-        "on-click": "~/scripts/eww/toggle-sound.sh"
+        "on-click": "~/.config/eww/scripts/waybar/toggle-sound.sh"
     }
 }

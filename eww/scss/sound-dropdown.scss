@@ -1,0 +1,28 @@
+/* SOUND WIDGET */
+.sound-container {
+  background-color: lighten($light-blue, 30%);
+  border: $border-w solid $silver;
+  border-radius: 6px;
+  padding: 8px;
+  font-family: "UbuntuMono Nerd Font", monospace;
+  font-size: 22px;
+  color: $white;
+  box-shadow: inset 0px -0.5px 3px $fg;
+
+  .sound-button {
+    color: $blue;
+    background-color: $white;
+    border: $border-w solid $border-sec;
+    border-radius: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-shadow: inset 0px -0.5px 3px $fg;
+
+    &:hover {
+      background-color: $silver;
+      color: $bg;
+      transition: all 250ms ease-in;
+      box-shadow: inset 0px -0.5px 3px $fg;
+    }
+  }
+}

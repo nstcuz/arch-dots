@@ -1,5 +1,19 @@
-; include: dock
-(include "eww_dock.yuck")
+;; essencials... i need spell check
+(include "variables.yuck")
+(include "windows.yuck") ;; bar, sound, dock
 
-; include: volume | bluetooth
-(include "eww_sound.yuck")
+;; include: bar
+(include "structure/bar.yuck")
+
+;; include: dock
+(include "structure/dock.yuck")
+
+;; include: sound
+(include "structure/sound.yuck")
+
+;; widgets
+(include "widgets/cpu.yuck")
+(include "widgets/ram.yuck")
+(include "widgets/time.yuck")
+(include "widgets/workspaces.yuck")
+(include "widgets/music.yuck")

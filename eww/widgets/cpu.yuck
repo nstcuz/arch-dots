@@ -1,0 +1,27 @@
+(defwidget cpu-mod[]
+  (box :class "center-submod"
+       :orientation "h"
+       :halign "end"
+       :valign "fill"
+       :spacing "6"
+       :space-evenly false
+    (cpu-label)
+    (cpu-widget)
+  )
+)
+
+(defwidget cpu-label []
+    (label :class "cpu-label" :text {round(EWW_CPU.avg, 2)} "%")
+)
+
+(defwidget cpu-widget []
+  (circular-progress :class "cpu"
+                     :clockwise false
+                     :thickness 12 
+                     :width 30
+                     :height 30
+                     :halign "center"
+                     :value {round(EWW_CPU.avg, 0)}
+  )
+)
+

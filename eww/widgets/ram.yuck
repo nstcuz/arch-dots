@@ -1,0 +1,25 @@
+(defwidget ram-mod[]
+  (box :class "center-submod"
+       :orientation "h"
+       :halign "start"
+       :valign "fill"
+       :spacing "6"
+    (ram-widget)
+    (ram-label)
+  )
+)
+
+(defwidget ram-widget []
+  (circular-progress :class "ram"
+                     :start-at 50
+                     :thickness 12 
+                     :width 30
+                     :height 30
+                     :halign "center"
+                     :value {EWW_RAM.used_mem_perc}
+  )
+)
+
+(defwidget ram-label []
+    (label :class "ram-label" :text {round(EWW_RAM.used_mem_perc, 0)})
+)
