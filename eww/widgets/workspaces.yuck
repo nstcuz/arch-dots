@@ -1,31 +1,19 @@
 ;; workspaces
 (defwidget workspaces []
   (box :class "workspaces"
-       :orientation "h"
        :halign "start"
-       (button :class "workspace-button" :onclick "hyprctl dispatch workspace 1" "") 
-       (button :class "workspace-button" :onclick "hyprctl dispatch workspace 2" "") 
-       (button :class "workspace-button" :onclick "hyprctl dispatch workspace 3" "") 
-       (button :class "workspace-button" :onclick "hyprctl dispatch workspace 4" "") 
-       (button :class "workspace-button" :onclick "hyprctl dispatch workspace 5" "") 
-       (button :class "workspace-button" :onclick "hyprctl dispatch workspace 6" "") 
-       (button :class "workspace-button" :onclick "hyprctl dispatch workspace 7" "") 
-       (button :class "workspace-button" :onclick "hyprctl dispatch workspace 8" "") 
-       (button :class "workspace-button" :onclick "hyprctl dispatch workspace 9" "") 
-       (button :class "workspace-button" :onclick "hyprctl dispatch workspace 10" "") 
+       (for workspace in {get-open-workspaces}
+        (button :class "workspace-button" :valign "fill" :halign "fill" :onclick "hyprctl dispatch workspace ${workspace.id}" "${workspace.name}")
+       )
+       ;; (button :class "workspace-button" :onclick "hyprctl dispatch workspace 1" "") 
+       ;; (button :class "workspace-button" :onclick "hyprctl dispatch workspace 2" "") 
+       ;; (button :class "workspace-button" :onclick "hyprctl dispatch workspace 3" "") 
+       ;; (button :class "workspace-button" :onclick "hyprctl dispatch workspace 4" "") 
+       ;; (button :class "workspace-button" :onclick "hyprctl dispatch workspace 5" "") 
+       ;; (button :class "workspace-button" :onclick "hyprctl dispatch workspace 6" "") 
+       ;; (button :class "workspace-button" :onclick "hyprctl dispatch workspace 7" "") 
+       ;; (button :class "workspace-button" :onclick "hyprctl dispatch workspace 8" "") 
+       ;; (button :class "workspace-button" :onclick "hyprctl dispatch workspace 9" "") 
+       ;; (button :class "workspace-button" :onclick "hyprctl dispatch workspace 10" "") 
   )
 )
-
-
-;; (defwidget workspaces []
-;;   (let ((active (parse-int get-active-ws)))
-;;     (box :class "workspaces"
-;;          :orientation "h"
-;;          :halign "start"
-;;          (repeating :for ws :in (json-parse get-open-ws)
-;;            (button
-;;              :class "workspace-button"
-;;              :onclick (concat "hyprctl dispatch workspace " (string ws))
-;;              (label
-;;                :text (if (= ws active) "" "")))))))
-;;

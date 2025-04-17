@@ -1,4 +1,4 @@
-/* vars */
+// Colors
 $bg: #18232a;
 $bg-green: #163f38;
 $fg: #98b6b0;
@@ -6,117 +6,19 @@ $silver: #d6e0e2;
 $white: #f7f6f9;
 $light-blue: #7f96ae;
 $blue: #307191;
-
-$border-w: 2px;
-$br-outer: 10px;
-$br-inner: 8px;
 $border-pri: $bg-green;
 $border-sec: $silver;
 
-/* TOP BAR */
-.bar-container {
-  font-family: "UbuntuMono Nerd Font", monospace;
-  font-size: 1.125rem;
-  font-weight: 500;
+$border-w: 2px;
+$br-inner: 8px;
+$br-outer: 10px;
+
+@import "scss/dock.scss";
+@import "scss/sound-dropdown.scss";
+@import "scss/bar.scss";
+
+* {
+  all: unset;
+  font-family: "42dot Sans", sans-serif;
+  font-size: 1rem;
 }
-
-/* modules  */
-.left-mod {
-  border-left: calc(#{$border-w} * 2) solid transparent;
-}
-
-.center-mod {
-  color: $blue;
-  border-radius: $br-inner;
-}
-
-.center-submod {
-  background: $white;
-  border: $border-w solid $bg-green;
-  border-radius: $br-inner;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-.right-mod {
-  border: 2px solid cyan;
-  border-right: calc(#{$border-w} * 2) solid transparent;
-}
-
-/* left mod widgets */
-.time {
-  color: $bg-green;
-  background: $white;
-  padding: 8px;
-  border: $border-w solid $border-pri;
-  border-radius: $br-outer;
-}
-
-.workspaces {
-  border: $border-w solid $border-sec;
-  border-radius: $br-outer;
-}
-
-.workspace-button {
-  /* padding-top: 2px; */
-  /* padding-bottom: 2px; */
-  padding-left: 12px;
-  padding-right: 20px;
-
-  color: $silver;
-  background: $white;
-  box-shadow: inset 0px -0.5px 3px $silver;
-  transition: all 250ms ease-in-out;
-}
-
-.workspace-button:first-child {
-  border-radius: 8px 0px 0px 8px;
-}
-
-.workspace-button:last-child {
-  border-radius: 0px 8px 8px 0px;
-}
-
-.workspace-button:hover {
-  background: $fg;
-  color: $white;
-  box-shadow: inset 0px -0.5px 3px $white;
-  font-weight: 600;
-}
-
-/* #workspaces button.active { */
-/*   background: $light-blue; */
-/*   color: $white; */
-/* } */
-
-/* center mod widgets  */
-.cpu {
-  color: $fg;
-  background: $blue;
-}
-
-.cpu-label {
-  color: $bg-green;
-}
-
-.music {
-  background: $white;
-  border: $border-w solid $blue;
-  border-radius: $br-outer;
-}
-
-.now-playing {
-  color: $blue;
-  padding: 8px;
-}
-
-.ram {
-  color: $fg;
-  background: $blue;
-}
-
-.ram-label {
-  color: $bg-green;
-}
-
-/* right mod widgets */

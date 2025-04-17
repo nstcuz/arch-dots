@@ -2,25 +2,30 @@
 (defpoll date :interval "1s" "date '\+%e %b | %R\'")
 
 ;; workspaces
-(defpoll get-open-ws :interval "1s"
-  "hyprctl -j workspaces | jq '[.[] | select(.id != -99) | .id]'"
+(defpoll get-active-workspace :interval "1s"
+  "hyprctl -j activeworkspace | jq '.id'"
 )
 
-(defpoll get-active-ws :interval "1s"
-  "hyprctl -j workspaces | jq '.[].name'"
+(defpoll get-open-workspaces :interval "1s"
+  "hyprctl -j workspaces | jq -c '[.[] | select(.id != -99) | {id: .id, name: .name}] | sort'"
 )
 
 ;; music label
-(defpoll now-playing :interval "1s"
-  "playerctl metadata --format '  {{ title }}' || echo ''"
-)
-
-;; get volume
-(defpoll volume-level :interval "750ms" :initial 50
-  "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}'"
+(deflisten now-playing :initial "..."
+  "playerctl --follow metadata --format '  {{ title }}' || echo ''"
 )
 
 ;; taskbar
-(defpoll get-taskbar-windows :interval "1s"
-  "hyprctl -j clients | jq '.[].initialClass'"
+(defpoll get-taskbar-content :interval "1s"
+ "hyprctl -j clients | jq -c '[.[].initialClass] | unique'"
+)
+
+;; get volume
+(defpoll volume :interval "1s" :initial 50
+  "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}'"
+)
+
+;; get microphone volume
+(defpoll mic-volume :interval "1s" :initial 100
+  "wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print int ($2 * 100)}'"
 )

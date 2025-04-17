@@ -17,3 +17,5 @@
 (include "widgets/time.yuck")
 (include "widgets/workspaces.yuck")
 (include "widgets/music.yuck")
+(include "widgets/taskbar.yuck")
+(include "widgets/volume.yuck")

@@ -1,6 +1,5 @@
 (defwidget cpu-mod[]
   (box :class "center-submod"
-       :orientation "h"
        :halign "end"
        :valign "fill"
        :spacing "6"

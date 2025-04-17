@@ -1,0 +1,9 @@
+(defwidget taskbar []
+  (box :class "taskbar-container"
+       :orientation "horizontal"
+    (for client in {get-taskbar-content}
+      (button :class "taskbar-item" :onclick "pkill ${client}" "${client}")
+    )
+  )
+)
+

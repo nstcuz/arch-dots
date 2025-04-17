@@ -1,6 +1,5 @@
 (defwidget time []
   (box :class "time"
-       :orientation "h"
        :halign "start"
        (label :text {date}) 
   )

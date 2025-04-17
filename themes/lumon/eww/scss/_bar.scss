@@ -1,23 +1,7 @@
-/* vars */
-$bg: #18232a;
-$bg-green: #163f38;
-$fg: #98b6b0;
-$silver: #d6e0e2;
-$white: #f7f6f9;
-$light-blue: #7f96ae;
-$blue: #307191;
-
-$border-w: 2px;
-$br-outer: 10px;
-$br-inner: 8px;
-$border-pri: $bg-green;
-$border-sec: $silver;
-
 /* TOP BAR */
 .bar-container {
   font-family: "UbuntuMono Nerd Font", monospace;
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* modules  */
@@ -39,7 +23,7 @@ $border-sec: $silver;
 }
 
 .right-mod {
-  border: 2px solid cyan;
+  /* border: $border-w solid cyan; */
   border-right: calc(#{$border-w} * 2) solid transparent;
 }
 
@@ -58,15 +42,12 @@ $border-sec: $silver;
 }
 
 .workspace-button {
-  /* padding-top: 2px; */
-  /* padding-bottom: 2px; */
-  padding-left: 12px;
+  padding-left: 20px;
   padding-right: 20px;
 
   color: $silver;
   background: $white;
   box-shadow: inset 0px -0.5px 3px $silver;
-  transition: all 250ms ease-in-out;
 }
 
 .workspace-button:first-child {
@@ -82,9 +63,10 @@ $border-sec: $silver;
   color: $white;
   box-shadow: inset 0px -0.5px 3px $white;
   font-weight: 600;
+  transition: all 250ms ease-in-out;
 }
 
-/* #workspaces button.active { */
+/* .workspaces button.active { */
 /*   background: $light-blue; */
 /*   color: $white; */
 /* } */
@@ -120,3 +102,41 @@ $border-sec: $silver;
 }
 
 /* right mod widgets */
+
+.taskbar-container {
+  border: $border-w solid $border-sec;
+  border-radius: $br-outer;
+}
+
+.taskbar-item {
+  padding-left: 2px;
+  padding-right: 2px;
+
+  color: $silver;
+  background: $white;
+  box-shadow: inset 0px -0.5px 3px $silver;
+}
+
+.taskbar-item:first-child {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.taskbar-item:last-child {
+  border-radius: 0px 8px 8px 0px;
+}
+
+.taskbar-item:hover {
+  background: $fg;
+  color: $white;
+  box-shadow: inset 0px -0.5px 3px $white;
+  font-weight: 600;
+  transition: all 250ms ease-in-out;
+}
+
+.volume {
+  color: $bg-green;
+  background: $white;
+  padding: 8px;
+  border: $border-w solid $border-pri;
+  border-radius: $br-outer;
+}

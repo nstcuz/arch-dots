@@ -1,6 +1,5 @@
 (defwidget ram-mod[]
   (box :class "center-submod"
-       :orientation "h"
        :halign "start"
        :valign "fill"
        :spacing "6"

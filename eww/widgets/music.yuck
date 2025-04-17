@@ -1,10 +1,18 @@
 (defwidget music []
   (box :class "music" 
-       :halign "h"
+       :halign "fill"
+       ;; :valign "fill"
        ;; :hexpand true
              
-   (label :class "now-playing" :limit-width 75 :text {now-playing}) 
+   (label :class "now-playing" :limit-width 75 :text {now-playing})
+    ;; (revealer :class "music-player"
+    ;;           :transition "crossfade"
+    ;;           :reveal music-dropdown
+    ;;           :duration "250ms"
+    ;; )
   )
 )
+
+
 
 

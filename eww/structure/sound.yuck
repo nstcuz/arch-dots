@@ -16,9 +16,10 @@
             :class "volume-slider"
             :min 0
             :max 100
-            :value volume-level
+            :value volume
             :onchange "wpctl set-volume @DEFAULT_AUDIO_SINK@ $(echo {} / 100 | bc -l)"
             )
         )
     )
 )
+
