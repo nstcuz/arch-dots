@@ -3,9 +3,7 @@
     ;; BAR STRUCTURE 
 (defwidget innie-bar []
   (box :class "bar-container"
-       :orientation "horizontal"   ;; vertical or horizontal
-       :halign "fill"              ;; horizontal allignment :start, center, end, fill
-       :valign "fill"              ;; vertical allignment :start, center, end, fill
+       :orientation "horizontal"
   (left-mod)
   (center-mod)
   (right-mod)
@@ -47,7 +45,7 @@
        :valign "fill"
        :spacing "6"
        :space-evenly false
-    (taskbar)
+    ;; (taskbar)
     (volume)
   )
 )

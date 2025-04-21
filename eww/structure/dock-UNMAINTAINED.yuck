@@ -1,0 +1,13 @@
+(defwidget app-dock []
+    (box :class "dock-container"
+        :orientation "horizontal"   ;; vertical or horizontal
+        :spacing "12"               ;; space between items
+        :halign "fill"              ;; orizontal allignment :start, center, end, fill
+        :valign "fill"              ;; vertical allignment :start, center, end, fill
+            (button :class "dock-button" :onclick "systemd-run --user bash -c 'hyprctl dispatch focusmonitor 1 && kitty'" "")
+            (button :class "dock-button" :onclick "hyprctl dispatch focusmonitor 1 && zen-browser" "")
+            (button :class "dock-button" :onclick "hyprctl dispatch focusmonitor 1 && vscodium" "")
+            (button :class "dock-button" :onclick "systemd-run --user bash -c 'hyprctl dispatch focusmonitor 1 && cider'" "")
+            (button :class "dock-button" :onclick "systemd-run --user bash -c 'hyprctl dispatch focusmonitor 1 && discord'" "")
+    )
+)

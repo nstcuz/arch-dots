@@ -1,0 +1,139 @@
+/* TOP BAR */
+.bar-container {
+  font-weight: 500;
+}
+
+/* modules  */
+.left-mod {
+  border-left: calc(#{$border-w} * 2) solid transparent;
+}
+
+.center-mod {
+  border-radius: $br-inner;
+}
+
+.center-submod {
+  background: $dark-blue;
+  border: $border-w solid $border-pri;
+  border-radius: $br-inner;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.right-mod {
+  /* border: $border-w solid cyan; */
+  border-right: calc(#{$border-w} * 2) solid transparent;
+}
+
+/* left mod widgets */
+.time {
+  color: $light-blue;
+  background: $dark-blue;
+  padding: 8px;
+  border: $border-w solid $border-pri;
+  border-radius: $br-outer;
+}
+
+.workspaces {
+  border: $border-w solid $border-pri;
+  border-radius: $br-outer;
+}
+
+.workspace-button {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: $light-blue;
+  background: $dark-blue;
+  box-shadow: inset 0px -0.5px 3px $white;
+}
+
+.workspace-button:first-child {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.workspace-button:last-child {
+  border-radius: 0px 8px 8px 0px;
+}
+
+.workspace-button:hover {
+  background: $lavendar;
+  color: $light-blue;
+  box-shadow: inset 0px -0.5px 3px $white;
+  font-weight: 600;
+  transition: all 250ms ease-in-out;
+}
+
+/* .workspaces button.active { */
+/*   background: $light-blue; */
+/*   color: $light-blue; */
+/* } */
+
+/* center mod widgets  */
+.cpu {
+  color: $white;
+  background: $dark-blue;
+}
+
+.cpu-label {
+  color: $light-blue;
+}
+
+.music {
+  background: $dark-blue;
+  border: $border-w solid $border-sec;
+  border-radius: $br-outer;
+}
+
+.now-playing {
+  color: $light-blue;
+  padding: 8px;
+}
+
+.ram {
+  color: $white;
+  background: $dark-blue;
+}
+
+.ram-label {
+  color: $light-blue;
+}
+
+/* right mod widgets */
+
+/* .taskbar-container { */
+/*   border: $border-w solid $border-pri; */
+/*   border-radius: $br-outer; */
+/* } */
+/**/
+/* .taskbar-item { */
+/*   padding-left: 2px; */
+/*   padding-right: 2px; */
+/**/
+/*   color: $silver; */
+/*   background: $dark-blue; */
+/*   box-shadow: inset 0px -0.5px 3px $white; */
+/* } */
+/**/
+/* .taskbar-item:first-child { */
+/*   border-radius: 8px 0px 0px 8px; */
+/* } */
+/**/
+/* .taskbar-item:last-child { */
+/*   border-radius: 0px 8px 8px 0px; */
+/* } */
+/**/
+/* .taskbar-item:hover { */
+/*   background: $lavendar; */
+/*   color: $white; */
+/*   box-shadow: inset 0px -0.5px 3px $white; */
+/*   font-weight: 600; */
+/*   transition: all 250ms ease-in-out; */
+/* } */
+
+.volume {
+  color: $light-blue;
+  background: $dark-blue;
+  padding: 8px;
+  border: $border-w solid $border-pri;
+  border-radius: $br-outer;
+}

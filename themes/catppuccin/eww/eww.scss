@@ -1,63 +1,34 @@
-$bg: #383C4A;
-$fg: #C6D0F5;
-$gray: #7C818C;
-$pink-accent:#F4B8E4;
-$lavendar-accent: #B7BDF8;
+/* lumon */
+/* $bg: #18232a; */
+/* $bg-green: #163f38; */
+/* $fg: #98b6b0; */
+/* $silver: #d6e0e2; */
+/* $white: #f7f6f9; */
+/* $light-blue: #7f96ae; */
+/* $blue: #307191; */
+
+/* $border-pri: $bg-green; */
+/* $border-sec: $silver; */
+
+/* catppuccin */
+$dark-blue: #383c4a;
+$light-blue: #c6d0f5;
+$gray: #7c818c;
+$white: #f9f5f4;
+$pink: #f4b8e4;
+$lavendar: #b7bdf8;
+
+$border-pri: $light-blue;
+$border-sec: $pink;
+$border-w: 2px;
+$br-inner: 8px;
+$br-outer: 10px;
+
+@import "scss/sound-dropdown.scss";
+@import "scss/bar.scss";
 
 * {
   all: unset;
-}
-
-.dock-container {
-  background-color: $bg;
-  border: 2px solid $lavendar-accent;
-  border-radius: 10px;
-  padding: 8px;
-  color: $fg;
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 24px;
-
-  .dock-button {
-    background-color: $bg;
-    border: 2px solid $gray;
-    border-radius: 8px;
-    box-shadow: inset 0px -0.5px 3px $fg; 
-
-    // &:last-child{
-    //  margin-right: 0px; 
-    // }
-
-    &:hover {
-      background-color: $lavendar-accent;
-      color: $bg;
-      transition: all 250ms ease-in;
-      box-shadow: inset 0px -0.5px 3px $bg;
-    }
-  }
+  font-size: 1rem;
 }
-
-.sound-container {
-  background-color: $bg;
-  border: 2px solid $lavendar-accent;
-  border-radius: 10px;
-  padding: 8px;
-  color: $fg;
-  font-family: "JetBrainsMono Nerd Font";
-  font-size: 20px;
-
-  .sound-button {
-    background-color: $bg;
-    border: 2px solid $gray;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    box-shadow: inset 0px -0.5px 3px $fg; 
-
-    &:hover {
-      background-color: $lavendar-accent;
-      color: $bg;
-      transition: all 250ms ease-in;
-      box-shadow: inset 0px -0.5px 3px $bg;
-    }
-  }
-}  

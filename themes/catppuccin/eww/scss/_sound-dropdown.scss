@@ -1,0 +1,26 @@
+/* SOUND WIDGET */
+.sound-container {
+  background-color: $dark-blue;
+  border: 2px solid $lavendar;
+  border-radius: 10px;
+  padding: 8px;
+  color: $white;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 20px;
+
+  .sound-button {
+    background-color: $dark-blue;
+    border: 2px solid $gray;
+    border-radius: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    box-shadow: inset 0px -0.5px 3px $light-blue;
+
+    &:hover {
+      background-color: $lavendar;
+      color: $white;
+      transition: all 250ms ease-in;
+      box-shadow: inset 0px -0.5px 3px $dark-blue;
+    }
+  }
+}

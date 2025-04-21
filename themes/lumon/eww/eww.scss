@@ -1,4 +1,13 @@
 // Colors
+/* catppuccin */
+/* $background: #383c4a; */
+/* $foreground: #c6d0f5; */
+/* $gray: #7c818c; */
+/* $white: #f9f5f4; */
+/* $pink_accent: #f4b8e4; */
+/* $lavendar_accent: #b7bdf8; */
+
+/* lumon */
 $bg: #18232a;
 $bg-green: #163f38;
 $fg: #98b6b0;
@@ -6,14 +15,13 @@ $silver: #d6e0e2;
 $white: #f7f6f9;
 $light-blue: #7f96ae;
 $blue: #307191;
+
 $border-pri: $bg-green;
 $border-sec: $silver;
-
 $border-w: 2px;
 $br-inner: 8px;
 $br-outer: 10px;
 
-@import "scss/dock.scss";
 @import "scss/sound-dropdown.scss";
 @import "scss/bar.scss";
 

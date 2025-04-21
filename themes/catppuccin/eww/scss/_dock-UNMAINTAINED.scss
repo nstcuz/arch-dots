@@ -1,0 +1,27 @@
+/* BOTTOM DOCK */
+.dock-container {
+  background-color: $dark-blue;
+  border: 2px solid $lavendar;
+  border-radius: 10px;
+  padding: 8px;
+  color: $white;
+  font-size: 24px;
+
+  .dock-button {
+    background-color: $dark-blue;
+    border: 2px solid $gray;
+    border-radius: 8px;
+    box-shadow: inset 0px -0.5px 3px $light-blue;
+
+    // &:last-child{
+    //  margin-right: 0px;
+    // }
+
+    &:hover {
+      background-color: $lavendar;
+      color: $white;
+      transition: all 250ms ease-in;
+      box-shadow: inset 0px -0.5px 3px $dark-blue;
+    }
+  }
+}
