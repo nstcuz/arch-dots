@@ -1,31 +1,52 @@
-;; time
+          ;; TIME 
 (defpoll date :interval "1s" "date '\+%e %b | %R\'")
 
-;; workspaces
-(defpoll get-active-workspace :interval "1s"
+          ;; WORKSPACES
+;; get current workspace
+(defpoll get-active-workspace :interval "500ms" :initial ""
   "hyprctl -j activeworkspace | jq '.id'"
 )
 
-(defpoll get-open-workspaces :interval "1s"
-  "hyprctl -j workspaces | jq -c '[.[] | select(.id != -99) | {id: .id, name: .name}] | sort'"
+;; get open workspaces
+(defpoll get-open-workspaces :interval "500ms" :initial "[]"
+  "hyprctl -j workspaces | jq '[.[] | select(.id != -99) | {id: .id, name: .name}] | sort'"
 )
 
+          ;; MUSIC
 ;; music label
 (deflisten now-playing :initial "..."
   "playerctl --follow metadata --format '  {{ title }}' || echo ''"
 )
 
+          ;; TASKBAR
 ;; taskbar
 (defpoll get-taskbar-content :interval "1s"
  "hyprctl -j clients | jq -c '[.[].initialClass] | unique'"
 )
 
-;; get volume
-(defpoll volume :interval "1s" :initial 50
+          ;; VOLUME
+;; get current volume %
+(defpoll volume :interval "500ms" :initial 50
   "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}'"
 )
 
 ;; get microphone volume
-(defpoll mic-volume :interval "1s" :initial 100
+(defpoll mic-volume :interval "500ms" :initial 100
   "wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print int ($2 * 100)}'"
+)
+
+;; get muted audio
+(defpoll is-muted :interval "500ms" 
+  "pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}'" 
+)
+
+;; get muted mic
+(defpoll is-muted-mic :interval "500ms" 
+  "pactl get-source-mute @DEFAULT_SOURCE@ | awk '{print $2}'" 
+)
+
+          ;;BRIGHTNESS
+;; get brightness % (doesnt work figure out why later)
+(defpoll screen-brightness :interval "10000ms" :initial 50
+  "ddcutil -d 1 getvcp 10 | awk -F ' ' '{print $9}' | cut -d ',' -f1"
 )

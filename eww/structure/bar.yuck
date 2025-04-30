@@ -30,10 +30,7 @@
        :halign "center"
        :valign "fill"
        :spacing "6"
-       ;; :space-evenly false
-    (cpu-mod)
     (music)
-    (ram-mod)
   )
 )
 

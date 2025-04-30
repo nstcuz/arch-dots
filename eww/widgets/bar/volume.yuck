@@ -1,0 +1,13 @@
+(defwidget volume []
+  (button :class "volume"
+  ;; (eventbox :class "volume"
+       :onclick "~/.config/eww/scripts/toggle-control-center.sh"
+       ;; :onhover "~/.config/eww/scripts/toggle-control-center.sh"
+       (box 
+       :halign "center"
+         (label :text "${volume} ${(is-muted == 'yes' ? ' ' : ' ')}")
+         (label :text "|")
+         (label :text "${mic-volume} ${(is-muted-mic == 'yes' ? '' : '')}")
+       )
+  )
+)

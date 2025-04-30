@@ -1,0 +1,31 @@
+(defwidget ram[]
+  (box :class "stats"
+       :orientation "vertical"
+       :halign "start"
+       :valign "fill"
+       :space-evenly false
+    (ram-label)
+    (ram-widget)
+    (ram-num)
+  )
+)
+
+(defwidget ram-label []
+    (label :class "stat-label" :text "RAM")
+)
+
+(defwidget ram-widget []
+  (circular-progress :class "stat-circle"
+                     :start-at 50
+                     :clockwise false
+                     :thickness 14 
+                     :width 90
+                     :height 50
+                     :halign "center"
+                     :value {EWW_RAM.used_mem_perc}
+  )
+)
+
+(defwidget ram-num []
+    (label :class "stat-num" :text {round(EWW_RAM.used_mem_perc, 0)})
+)

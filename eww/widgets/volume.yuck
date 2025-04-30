@@ -1,6 +1,0 @@
-(defwidget volume []
-  (box :class "volume"
-       :halign "start"
-       (label :text "${volume}    | ${mic-volume} ")
-  )
-)

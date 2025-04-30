@@ -1,0 +1,63 @@
+(defwidget app-launcher []
+  (box :class "app-launcher"
+       :orientation "vertical"
+       :space-evenly "true"
+       :halign "start"
+       :valign "start"
+       :spacing 8 
+
+    ;; row 1
+    (box :class "app-rows"
+         :orientation "horizontal"
+         :spacing 8
+     (button :class "app-button" 
+             :valign "center"
+             :halign "center"
+             :onclick "/sbin/zen-browser"
+      (image :path "/home/nood/.config/eww/images/zen-browser-icon.png" :image-width 60 :image-height 60 )
+      ) 
+     (button :class "app-button" 
+             :valign "center"
+             :halign "center"
+             :onclick "/sbin/discord"
+      (image :path "/home/nood/.config/eww/images/discord-icon.svg" :image-width 56 :image-height 56 )
+      ) 
+    )
+
+    ;; row 2
+    (box :class "app-rows"
+         :orientation "horizontal"
+         :spacing 8
+     (button :class "app-button" 
+             :valign "center"
+             :halign "center"
+             :onclick "systemd-run --user torguard" ;; need to remove sudo for torguard
+      (image :path "/home/nood/.config/eww/images/torguard-icon.png" :class "torguard-icon" :image-width 64 :image-height 64 )
+      ) 
+      (button :class "app-button" 
+              :valign "center"
+              :halign "center"
+              :onclick "/sbin/freetube"
+       (image :path "/home/nood/.config/eww/images/freetube-icon.png" :image-width 50 :image-height 50 )
+      ) 
+    )
+
+    ;; row 3
+    (box :class "app-rows"
+         :orientation "horizontal"
+         :spacing 8
+     (button :class "app-button" 
+             :valign "center"
+             :halign "center"
+             :onclick "/sbin/kitty"
+      (image :path "/home/nood/.config/eww/images/kitty.svg" :class "torguard-icon" :image-width 60 :image-height 60 )
+      ) 
+      (button :class "app-button" 
+              :valign "center"
+              :halign "center"
+              :onclick "steam"
+       (image :path "/home/nood/.config/eww/images/steam-icon.svg" :image-width 50 :image-height 50 )
+      ) 
+    )
+  )
+)

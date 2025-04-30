@@ -17,6 +17,7 @@ vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.wrap = false
 
 -- Line Numbers
 vim.wo.number = true
@@ -28,4 +29,3 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = "Move to below split" })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = "Move to above split" })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = "Move to right split" })
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>', { desc = "Clear search highlight" })
-

@@ -1,21 +1,24 @@
 ;; essencials... i need spell check
 (include "variables.yuck")
-(include "windows.yuck") ;; bar, sound, dock
+(include "windows.yuck") ;; bar, sound
 
-;; include: bar
+    ;; include: bar
 (include "structure/bar.yuck")
-
-;; include: dock
-(include "structure/dock.yuck")
-
-;; include: sound
-(include "structure/sound.yuck")
-
 ;; widgets
-(include "widgets/cpu.yuck")
-(include "widgets/ram.yuck")
-(include "widgets/time.yuck")
-(include "widgets/workspaces.yuck")
-(include "widgets/music.yuck")
-(include "widgets/taskbar.yuck")
-(include "widgets/volume.yuck")
+(include "widgets/bar/time.yuck")
+(include "widgets/bar/workspaces.yuck")
+(include "widgets/bar/music.yuck")
+(include "widgets/bar/taskbar.yuck")
+(include "widgets/bar/volume.yuck")
+
+    ;; include: control-center
+(include "structure/control-center.yuck")
+;; widgets
+(include "widgets/control-center/app-launcher.yuck")
+(include "widgets/control-center/cpu.yuck")
+(include "widgets/control-center/ram.yuck")
+(include "widgets/control-center/volume-slider.yuck")
+(include "widgets/control-center/brightness-slider.yuck")
+
+(include "widgets/control-center/sound-button.yuck")
+(include "widgets/control-center/power-button.yuck")

@@ -1,12 +1,11 @@
 /* TOP BAR */
 .bar-container {
-  font-family: "UbuntuMono Nerd Font", monospace;
   font-weight: 600;
 }
 
 /* modules  */
 .left-mod {
-  border-left: calc(#{$border-w} * 2) solid transparent;
+  border-left: 4px solid transparent;
 }
 
 .center-mod {
@@ -16,7 +15,7 @@
 
 .center-submod {
   background: $white;
-  border: $border-w solid $bg-green;
+  border: $border-pri;
   border-radius: $br-inner;
   padding-left: 4px;
   padding-right: 4px;
@@ -24,7 +23,7 @@
 
 .right-mod {
   /* border: $border-w solid cyan; */
-  border-right: calc(#{$border-w} * 2) solid transparent;
+  border-right: 4px solid transparent;
 }
 
 /* left mod widgets */
@@ -32,12 +31,12 @@
   color: $bg-green;
   background: $white;
   padding: 8px;
-  border: $border-w solid $border-pri;
+  border: $border-pri;
   border-radius: $br-outer;
 }
 
 .workspaces {
-  border: $border-w solid $border-sec;
+  border: $border-sec;
   border-radius: $br-outer;
 }
 
@@ -72,18 +71,9 @@
 /* } */
 
 /* center mod widgets  */
-.cpu {
-  color: $fg;
-  background: $blue;
-}
-
-.cpu-label {
-  color: $bg-green;
-}
-
 .music {
   background: $white;
-  border: $border-w solid $blue;
+  border: 2px solid $blue;
   border-radius: $br-outer;
 }
 
@@ -92,51 +82,42 @@
   padding: 8px;
 }
 
-.ram {
-  color: $fg;
-  background: $blue;
-}
-
-.ram-label {
-  color: $bg-green;
-}
-
-/* right mod widgets */
-
-.taskbar-container {
-  border: $border-w solid $border-sec;
-  border-radius: $br-outer;
-}
-
-.taskbar-item {
-  padding-left: 2px;
-  padding-right: 2px;
-
-  color: $silver;
-  background: $white;
-  box-shadow: inset 0px -0.5px 3px $silver;
-}
-
-.taskbar-item:first-child {
-  border-radius: 8px 0px 0px 8px;
-}
-
-.taskbar-item:last-child {
-  border-radius: 0px 8px 8px 0px;
-}
-
-.taskbar-item:hover {
-  background: $fg;
-  color: $white;
-  box-shadow: inset 0px -0.5px 3px $white;
-  font-weight: 600;
-  transition: all 250ms ease-in-out;
-}
-
+/* right mod widgets  */
 .volume {
   color: $bg-green;
   background: $white;
   padding: 8px;
-  border: $border-w solid $border-pri;
+  border: $border-pri;
   border-radius: $br-outer;
 }
+
+/* right mod widgets */
+/* .taskbar-container { */
+/*   border: $border-sec; */
+/*   border-radius: $br-outer; */
+/* } */
+/**/
+/* .taskbar-item { */
+/*   padding-left: 2px; */
+/*   padding-right: 2px; */
+/**/
+/*   color: $silver; */
+/*   background: $white; */
+/*   box-shadow: inset 0px -0.5px 3px $silver; */
+/* } */
+/**/
+/* .taskbar-item:first-child { */
+/*   border-radius: 8px 0px 0px 8px; */
+/* } */
+/**/
+/* .taskbar-item:last-child { */
+/*   border-radius: 0px 8px 8px 0px; */
+/* } */
+/**/
+/* .taskbar-item:hover { */
+/*   background: $fg; */
+/*   color: $white; */
+/*   box-shadow: inset 0px -0.5px 3px $white; */
+/*   font-weight: 600; */
+/*   transition: all 250ms ease-in-out; */
+/* } */

@@ -1,0 +1,9 @@
+;; workspaces
+(defwidget workspaces []
+  (box :class "workspaces"
+       :halign "start"
+       (for workspace in {get-open-workspaces}
+        (button :class "workspace-button" :valign "fill" :halign "fill" :onclick "hyprctl dispatch workspace ${workspace.id}" "${workspace.name}")
+       )
+  )
+)

@@ -1,0 +1,14 @@
+(defwidget sound-button []
+  (box 
+       :valign "center"
+       :halign "center"
+       :spacing "12"
+       :space-evenly false
+    (box 
+      (button :class "sound-button" :height 40 :width 90 :onclick "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" :onrightclick "systemd-run --user bash -c 'pwvucontrol'" "${(is-muted == 'yes' ? ' ' : ' ')}" )
+      (button :class "sound-button" :height 40 :width 90 :onclick "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle" "${(is-muted-mic == 'yes' ? ' ' : ' ')}")
+      (button :class "sound-button" :height 40 :width 90 :onclick "systemd-run --user bash -c 'kitty -e bluetuith'" "󰂯")
+    )
+  )
+)
+

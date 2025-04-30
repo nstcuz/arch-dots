@@ -1,23 +1,25 @@
-@define-color bg              #18232a;
-@define-color bg-green        #163f38;
-@define-color fg              #98b6b0;
-@define-color silver          #d6e0e2;
-@define-color white           #f7f6f9;
-@define-color light-blue      #7f96ae;
-@define-color blue            #307191;
-
+@define-color bg #18232a;
+@define-color bg-green #163f38;
+@define-color fg #98b6b0;
+@define-color silver #d6e0e2;
+@define-color white #f7f6f9;
+@define-color light-blue #7f96ae;
+@define-color blue #307191;
 /* there seems to be an issue when using vars */
 
 scale {
   /* min-height: 32px; */
   min-width: 140px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 scale trough {
-  background-color: #f7f6f9; 
+  background-color: #f7f6f9;
   border: 2px solid #7f96ae;
   border-radius: 10px;
   min-height: 6px;
+  transition: background 300ms ease;
 }
 
 scale highlight {
@@ -30,4 +32,8 @@ scale slider {
   border: none;
   min-width: 14px;
   min-height: 14px;
+}
+
+scale:hover trough {
+  background-color: #d6e0e2;
 }

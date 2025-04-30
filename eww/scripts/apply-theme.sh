@@ -19,8 +19,8 @@ fi
 echo "$NEW_THEME" > "$CURRENT_THEME_FILE"
 
 # symlink
+# ln -sf "$THEME_DIR/$NEW_THEME/waybar/style.css" "$HOME/.config/waybar/style.css"
 ln -sf "$THEME_DIR/$NEW_THEME/hyprland/myColors.conf" "$HOME/.config/hypr/colors.conf"
-ln -sf "$THEME_DIR/$NEW_THEME/waybar/style.css" "$HOME/.config/waybar/style.css"
 ln -sf "$THEME_DIR/$NEW_THEME/eww/eww.scss" "$HOME/.config/eww/eww.scss"
 ln -sf "$THEME_DIR/$NEW_THEME/mako/config" "$HOME/.config/mako/config"
 # folders
@@ -36,7 +36,6 @@ swww img "$THEME_DIR/$NEW_THEME/wallpaper.png" --transition-type grow --transiti
 pkill eww
 eww daemon 
 eww open bar &
-# pkill waybar && waybar &
 pkill mako && mako &
 hyprctl reload
 

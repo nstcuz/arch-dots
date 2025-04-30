@@ -1,0 +1,8 @@
+(defwidget volume-slider[]
+  (eventbox 
+    (scale :class "volume-slider"
+           :min 0
+           :max 100
+           :value volume
+           :onchange "wpctl set-volume @DEFAULT_SINK@ $(echo {} / 100 | bc -l)"))
+)

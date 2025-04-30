@@ -1,0 +1,60 @@
+(defwidget control-center []
+  (box :class "control-center-container"
+       :orientation "vertical"
+       :valign "start"             
+       :spacing 12
+       :space-evenly false
+
+    ;; control center
+    (box :class "control-center"
+         :spacing 8
+         :space-evenly "false"
+
+            ;; app launcher
+      (box :orientation "horizontal" :valign "start"
+        (app-launcher))
+            ;; stats 
+      (box :class "stats-container" 
+           :orientation "vertical"
+           :space-evenly false
+        (box :orientation "horizontal"
+         (cpu)
+         (ram))
+
+            ;; brightness slider
+        (box :orientation "vertical" :spacing 6
+          (label :class "section-title" :text "")
+          (brightness-slider)
+)
+
+          ;; volume slider
+        (box :orientation "vertical"
+             :spacing 6
+        (label :class "section-title" :text "")
+        (volume-slider)
+        )))
+
+          ;; sound apps
+    (box :class "section"
+         :orientation "vertical" 
+         :space-evenly false
+         :spacing 0
+         (label :class "section-title" 
+                :halign "start"
+                :valign "start" 
+                :text "Sound")
+         (sound-button))
+
+              ;; power buttons
+    (box :class "section"
+         :orientation "vertical" 
+         :space-evenly false
+         :spacing 0
+         (label :class "section-title" 
+                :halign "start"
+                :valign "start" 
+                :text "Power")
+         (power-button))
+  )
+)
+

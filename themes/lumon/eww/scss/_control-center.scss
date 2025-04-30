@@ -1,0 +1,117 @@
+/* SOUND WIDGET */
+.control-center-container {
+  background-color: lighten($light-blue, 28%);
+  border: 2px solid $silver;
+  border-radius: $br-outer;
+  padding: 8px;
+
+  .control-center-stats {
+    border: $border-sec;
+    border-radius: $br-inner;
+  }
+
+  .section {
+    background-color: lighten($light-blue, 32%);
+    border-radius: $br-outer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+
+    &:first-child {
+      // sound
+      /* padding-bottom: 16px; */
+    }
+  }
+
+  .section-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: darken($light-blue, 15%);
+    padding-top: 8px;
+    padding-left: 8px;
+  }
+}
+
+/* control center */
+.control-center {
+  background-color: $white;
+  border-radius: $br-outer;
+}
+
+.app-launcher {
+  border: $border-pri;
+  border-radius: $br-outer;
+  background-color: $white;
+  box-shadow: inset 0px -0.5px 3px $light-blue;
+
+  padding: 8px;
+  font-weight: 500;
+  background-color: lighten($light-blue, 35%);
+  border: $border-sec;
+  border-radius: $br-inner;
+  box-shadow: inset 0px -0.5px 3px $light-blue;
+}
+
+.stats-container {
+  background-color: lighten($light-blue, 35%);
+  border: $border-sec;
+  border-radius: $br-inner;
+  box-shadow: inset 0px -0.5px 3px $light-blue;
+}
+
+/* cpu & gpu */
+.stats {
+  /* border: $border-pri; */
+}
+
+.stat-circle {
+  color: $fg;
+  background: $blue;
+}
+
+.stat-label,
+.stat-num {
+  color: $bg-green;
+  padding-top: 4px;
+}
+
+/* buttons */
+.sound-button {
+  color: $blue;
+  font-weight: 500;
+  background-color: $white;
+  border: $border-sec;
+  border-radius: $br-inner;
+  box-shadow: inset 0px -0.5px 3px $light-blue;
+
+  &:last-child {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    background-color: $fg;
+    color: $bg;
+    transition: all 250ms ease-in;
+    box-shadow: inset 0px -0.5px 3px $white;
+  }
+}
+
+.power-button {
+  color: $blue;
+  font-weight: 500;
+  background-color: $white;
+  border: $border-sec;
+  border-radius: $br-inner;
+  box-shadow: inset 0px -0.5px 3px $light-blue;
+
+  &:hover {
+    background-color: $fg;
+    color: $bg;
+    transition: all 250ms ease-in;
+    box-shadow: inset 0px -0.5px 3px $white;
+  }
+}
+
+/* .app-button { */
+/*   .torguard-icon { */
+/*     border-radius: $br-inner; */
+/*   } */
+/* } */

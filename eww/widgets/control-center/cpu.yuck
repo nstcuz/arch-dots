@@ -1,0 +1,33 @@
+(defwidget cpu[]
+  (box :class "stats"
+       :orientation "vertical"
+       :halign "end"
+       :valign "fill"
+       :space-evenly false
+       :spacing 2
+    (cpu-label)
+    (cpu-widget)
+    (cpu-num)
+  )
+)
+
+(defwidget cpu-label []
+    (label :class "stat-label" :text "CPU")
+)
+
+(defwidget cpu-num []
+    (label :class "stat-num" :text {round(EWW_CPU.avg, 2)} "%")
+)
+
+(defwidget cpu-widget []
+  (circular-progress :class "stat-circle"
+                     :start-at 50
+                     :clockwise false
+                     :width 90 
+                     :height 50
+                     :thickness 14 
+                     :halign "center"
+                     :value {round(EWW_CPU.avg, 0)}
+  )
+)
+

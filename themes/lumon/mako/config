@@ -10,10 +10,10 @@ padding=10
 # design / font
 background-color=#f7f6f9
 border-size=2
-border-color=#307191
+border-color=#163f38
 border-radius=6
 
-font=UbuntuMono Nerd Font 12
+font=42dot Sans 12
 text-color=#163f38
 
 # icons
@@ -21,5 +21,3 @@ icons=1
 max-icon-size=48 
 
 default-timeout=5000
-#progress-color=#173D37
-layer=overlay

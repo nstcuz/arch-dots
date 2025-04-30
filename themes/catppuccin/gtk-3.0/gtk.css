@@ -1,31 +1,40 @@
-@define_color background     #383c4a;
-@define_color foreground     #c6d0f5;
-@define_color silver         #7c818c;
-@define_color pinkaccent     #f4b8e4;
-@define_color lavendaraccent #b7bdf8;
-
-/* there seems to be an issue when using vars. */
-
 scale {
-  /* min-height: 32px; */
   min-width: 140px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 scale trough {
-  background-color: #7C818C; 
+  /* $gray */
+  background-color: #7c818c;
+
+  /* $light-blue */
   border: 2px solid #c6d0f5;
-  border-radius: 10px;
+  border-radius: 8px;
   min-height: 6px;
+  transition: background 300ms;
 }
 
 scale highlight {
-  background-color: #F4B8E4;
-  border-radius: 10px;
+  /* $pink */
+  background-color: #f4b8e4;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
 scale slider {
-  background-color: transparent;
-  border: none;
+  /* $white */
+  background-color: #f4b8e4;
+  border-radius: 50%;
+  margin-right: 6px;
+
+  /* subtle pink glow */
+  box-shadow: 0 0 2px #f4b8e4;
   min-width: 14px;
   min-height: 14px;
+}
+
+scale:hover trough {
+  /* slightly lighter than $gray */
+  background-color: #8c919a;
 }

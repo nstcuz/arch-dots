@@ -1,0 +1,10 @@
+(defwidget brightness-slider[]
+          (eventbox 
+            (scale
+            :class "volume-slider"
+            ;; :marks 25
+            :min 0
+            :max 100
+            :value screen-brightness 
+            :onchange "ddcutil -d 1 setvcp 10 {}"))
+)

@@ -7,7 +7,7 @@ THEME_A="catppuccin"
 THEME_B="lumon"
 
 # get current theme
-CURRENT_THEME=$(cat "$CURRENT_THEME_FILE" 2>/dev/null)
+CURRENT_THEME=$(cat "$CURRENT_THEME_FILE")
 
 # toggle
 if [[ "$CURRENT_THEME" == "$THEME_A" ]]; then
@@ -29,15 +29,11 @@ ln -sf "$THEME_DIR/$NEW_THEME/eww/scss" "$HOME/.config/eww/scss"
 rm -rf "$HOME/.config/gtk-3.0"
 ln -s "$THEME_DIR/$NEW_THEME/gtk-3.0" "$HOME/.config/gtk-3.0"
 
-# Set wallpaper for the theme
 swww img "$THEME_DIR/$NEW_THEME/wallpaper.png" --transition-type grow --transition-duration 0.8
 
-# reload
-pkill eww
-eww daemon 
-eww open bar &
+pkill eww && eww open bar &
 # pkill waybar && waybar &
 pkill mako && mako &
 hyprctl reload
 
-notify-send "Updated to $NEW_THEME"
+notify-send "Updated to" "$NEW_THEME"

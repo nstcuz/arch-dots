@@ -1,0 +1,14 @@
+(defwidget power-button []
+  (box 
+       :valign "center"
+       :halign "center"
+       ;; :spacing "12"
+       ;; :space-evenly false
+    (box 
+      (button :class "power-button" :height 50 :width 110 :onclick "shutdown now" "shutdown")
+      (button :class "power-button" :height 50 :width 110 :onclick "reboot" "reboot")
+      (button :class "power-button" :height 50 :width 110 :onclick "" "lock")
+    )
+  )
+)
+

@@ -4,6 +4,7 @@
 /Electron/
 /Epic/
 /dconf/
+/freetube/
 /go/
 /gh/
 /gtk-3.0/
@@ -19,6 +20,7 @@
 /Epic/Psychonauts2/Saved/SaveGames
 /qmk/
 /qmk_firmware/
+/yt-x/
 
 # Backup/Swap/Cache files
 *.swp
